@@ -1,5 +1,6 @@
 $(document).ready(function () {
 	(function () {
+		let url = "http://localhost:3001/api/files/";
 		const socket = io('/admin', { forceNew: false });
 		let refrescarTiempo = function (params) {
 			$(".server a").each(function () {
@@ -48,6 +49,33 @@ $(document).ready(function () {
 			e.preventDefault();
 			enviar();
 		});
+		$("body").on("click", ".btn-list", (e) => {
+			e.preventDefault();
+			fetch(url + "all", {
+				method: 'GET',
+				headers: {
+					'Content-Type': 'application/json'
+				}
+			})
+				.then(function (response) {
+					return response.json();
+				})
+				.then(function (myJson) {
+					$("body").find(".server").empty();
+					myJson.forEach(function (content) {
+						$("body").find(".server").append(`
+						<a href="#" class="list-group-item list-group-item-action" data-date="${content.key}">
+							<div class="d-flex w-100 justify-content-between">
+								<h5 class="mb-1">${content.key} dice: </h5>
+								<small class="time">${content.size}</small>
+							</div>
+							<!-- <p class="mb-1"></p> -->
+							<!-- <small>Donec id elit non mi porta.</small> -->
+						</a>
+					`);
+					});
+				});
+		});
 		// $('#fromPruebas').formValidation(fromPruebas)
 		// 	.on('success.form.fv', async function (e) {
 		// 		e.preventDefault();
@@ -92,6 +120,7 @@ $(document).ready(function () {
 				});
 		});
 	})();
+	$(":file").filestyle();
 });
 
 // Notification.requestPermission().then(function (result) {

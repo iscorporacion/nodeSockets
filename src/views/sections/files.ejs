@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <%- include('../config/css') %>
+    <title>Document</title>
+</head>
+
+<body>
+    <%- include('../config/nav') %>
+    <div class="container p-4 minh-100">
+        <div class="row">
+            <div class="card col-12">
+                <div class="card-body">
+                    <div class="card-title">
+                        <H1>Enviar mensaje</H1>
+                    </div>
+                    <form action="" id="formUpload">
+                        <div class="form-row">
+                            <div class="col">
+                                <div class="custom-file">
+                                    <label for=customFile">Email address</label>
+                                    <input type="file" class="custom-file-input" name="arc_archivo" id="customFile"
+                                        lang="es">
+                                    <label class="custom-file-label" for="customFile">Seleccione un archivo</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" name="arc_nombre" placeholder="Last name">
+                            </div>
+                        </div>
+                        <div class="progress progress-striped active">
+                            <div class="progress-bar bg-info" role="progressbar" style="width: 0%"></div>
+                        </div>
+                        <div class="form-row pt-2">
+                            <div class="col">
+                                <button type="submit" class="btn btn-primary">Guardar</button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+            <!-- <button class="btn btn-success btn-list">Listar</button> -->
+            <div class="card col-12 minh-60 mt-2 pt-2">
+                <ul class="list-group server">
+                </ul>
+                <!-- <div class="client col-2 text-center"></div>
+					<div class="server col-10"></div> -->
+            </div>
+        </div>
+    </div>
+    <%- include('../config/js') %>
+    <script src="/js/files.js"></script>
+</body>
+
+</html>

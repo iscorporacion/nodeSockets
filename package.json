@@ -5,21 +5,33 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon src/index.js",
-    "start": "node src/index.js"
+    "start": "forever src/index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@popperjs/core": "^2.4.0",
+    "axios": "^0.19.2",
+    "bootstrap": "^4.5.0",
+    "bootstrap-filestyle": "^1.2.1",
+    "bootstrap-material-design": "^4.1.1",
     "cookie-parser": "^1.4.5",
     "dv-formvalidation": "^0.8.1",
     "ejs": "^3.1.2",
     "express": "^4.17.1",
+    "file-saver": "^2.0.2",
     "install": "^0.13.0",
+    "jquery": "^3.5.1",
+    "js-file-download": "^0.4.12",
+    "material-design-iconic-font": "^2.2.0",
+    "material-design-icons": "^3.0.1",
     "moment": "^2.25.3",
     "mongoose": "^5.9.12",
     "morgan": "^1.10.0",
+    "multer": "^1.4.2",
     "socket.io": "^2.3.0",
+    "sweetalert2": "^9.14.0",
     "timeago.js": "^4.0.2"
   },
   "devDependencies": {
