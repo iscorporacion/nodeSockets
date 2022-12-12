@@ -19,7 +19,7 @@
     "cookie-parser": "^1.4.5",
     "dv-formvalidation": "^0.8.1",
     "ejs": "^3.1.2",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "file-saver": "^2.0.2",
     "install": "^0.13.0",
     "jquery": "^3.5.1",
